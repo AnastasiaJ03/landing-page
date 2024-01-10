@@ -1,0 +1,22 @@
+@use "./variables" as v;
+
+.container {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: v.$white;
+    border-radius: 2rem;
+    padding: 1rem 1.2rem;
+    color: v.$black;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in;
+    &:hover {
+        transform: translateY(-20px);
+        box-shadow: 3px 3px 4px v.$black;
+    }
+}

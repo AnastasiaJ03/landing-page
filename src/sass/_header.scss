@@ -1,0 +1,41 @@
+@use "./variables" as v;
+
+.header {
+    font-size: 1.6rem;
+    color: v.$white;
+    margin-block-end: 4rem;
+    a:hover {
+        text-decoration: underline;
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav {
+        ul {
+            display: flex;
+            gap: 5rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__body {
+            flex-direction: column;
+        }
+        &__logo {
+            max-width: 50px;
+            padding-block: 2rem;
+        }
+
+        &__nav {
+            ul {
+                gap: 2rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@use "./variables" as v;
+
+.hero {
+    &__inner {
+        display: flex;
+        position: relative;
+    }
+    &__text {
+        max-width: 600px;
+        padding-top: 4rem;
+        color: v.$white;
+        margin-right: 12rem;
+        h1 {
+            font-size: 8.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        p {
+            margin-block-end: 3rem;
+        }
+    }
+    &__socials {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+
+        i {
+            font-size: 3rem;
+            color: v.$white;
+            margin-block-start: 2rem;
+        }
+
+        a {
+            display: block;
+            transition: all 0.7s ease-in;
+            &:hover {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text {
+            text-align: center;
+            margin: 0;
+        }
+        &__img {
+            margin-block: 2rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        &__text {
+            h1 {
+                font-size: 5rem;
+            }
+        }
+        &__socials {
+            position: static;
+            ul {
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+            }
+        }
+    }
+}
